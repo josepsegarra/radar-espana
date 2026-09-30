@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Radar figurativo España</title>
+<meta name="description" content="Exposiciones, talleres y charlas de pintura figurativa en España, actualizado cada mañana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cartel suizo a sangre. Cada artista tiene un pigmento; «Próximamente» manda, el archivo va detrás en rejilla; el detalle se abre en un panel lateral */
+:root {
+  --bg: #ffffff;
+  --ink: #0b0b0c;
+  --soft: #f1f1ee;
+  --muted: #62625e;
+  --line: #0b0b0c;
+  --hair: #dcdcd7;
+  --warn: #f2b705;
+  --display: "Bricolage Grotesque", "Arial Black", "Helvetica Neue", sans-serif;
+  --body: "Geist", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0b0b0c; --ink: #f2f2ef; --soft: #18181a; --muted: #9c9c96; --line: #f2f2ef; --hair: #2c2c2e; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0b0b0c; --ink: #f2f2ef; --soft: #18181a; --muted: #9c9c96; --line: #f2f2ef; --hair: #2c2c2e; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html { padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 15px/1.5 var(--body); overflow-x: hidden; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: max(16px, 3vw); }
+
+/* ——— Cabecera ——— */
+.top { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 18px; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--line); }
+.top .live::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #e4352a; margin-right: 8px; vertical-align: 1px; }
+@media (prefers-reduced-motion: no-preference) { .top .live::before { animation: blink 1.6s ease-in-out infinite; } }
+@keyframes blink { 50% { opacity: 0.2; } }
+
+.hero { padding-block: clamp(28px, 5vw, 64px) 0; display: grid; gap: 20px; }
+.wordmark {
+  font: 800 clamp(64px, 17vw, 250px)/0.8 var(--display); font-variation-settings: "wdth" 75, "opsz" 96;
+  letter-spacing: -0.045em; margin: 0; text-transform: uppercase;
+}
+.wordmark .es { display: block; font-size: 0.34em; letter-spacing: -0.02em; margin-top: 0.12em; color: #e4352a; }
+.wordmark .dot { display: inline-block; width: 0.16em; height: 0.16em; border-radius: 50%; background: #e4352a; margin-left: 0.04em; }
+.hero-row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; align-items: end; }
+@media (max-width: 760px) { .hero-row { grid-template-columns: minmax(0, 1fr); } }
+.lede { font: 400 clamp(18px, 2vw, 22px)/1.35 var(--body); max-width: 34ch; margin: 0; }
+.stats { display: flex; gap: clamp(16px, 3vw, 40px); flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 760px) { .stats { justify-content: flex-start; } }
+.stat b { display: block; font: 700 clamp(36px, 5vw, 56px)/1 var(--display); font-variation-settings: "wdth" 80; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.stat span { font: 500 11px/1.2 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* Cinta con lo último */
+.ticker { margin-top: clamp(24px, 4vw, 48px); border-block: 2px solid var(--line); overflow: hidden; white-space: nowrap; }
+.ticker-track { display: inline-flex; gap: 48px; padding-block: 12px; font: 600 15px/1 var(--body); }
+.ticker-track span { display: inline-flex; align-items: center; gap: 10px; }
+.ticker-track i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+@media (prefers-reduced-motion: no-preference) { .ticker-track { animation: slide 60s linear infinite; } .ticker:hover .ticker-track { animation-play-state: paused; } }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ——— Secciones ——— */
+section { padding-block: clamp(40px, 6vw, 80px) 0; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.sec-head h2 { font: 800 clamp(34px, 5.4vw, 72px)/0.9 var(--display); font-variation-settings: "wdth" 78; letter-spacing: -0.035em; margin: 0; text-transform: uppercase; text-wrap: balance; }
+.sec-head p { margin: 0; color: var(--muted); font-size: 14px; max-width: 46ch; }
+
+/* Filtros */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 2px solid var(--line); border-radius: 999px; background: transparent; cursor: pointer; font: 600 13px/1 var(--body); }
+.chip i { width: 10px; height: 10px; border-radius: 50%; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.chip .n { font: 500 12px/1 var(--mono); opacity: 0.6; }
+
+/* Próximamente */
+.upcoming { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.up {
+  position: relative; text-align: left; cursor: pointer; border: 0; padding: 22px 22px 20px; min-height: 280px;
+  background: var(--pig); color: var(--pig-ink); display: flex; flex-direction: column; gap: 10px; border-radius: 4px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.up:hover { transform: translateY(-4px) rotate(-0.4deg); box-shadow: 8px 8px 0 var(--ink); }
+.up .count { font: 800 clamp(64px, 8vw, 104px)/0.8 var(--display); font-variation-settings: "wdth" 75; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+.up .count small { font: 600 13px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; margin-left: 6px; vertical-align: 0.9em; }
+.up .kind { font: 500 11px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; display: flex; justify-content: space-between; gap: 8px; }
+.up h3 { font: 700 26px/1.02 var(--display); font-variation-settings: "wdth" 85; letter-spacing: -0.02em; margin: auto 0 0; text-wrap: balance; }
+.up .where { font-size: 13px; opacity: 0.85; }
+.up .who { font: 600 12px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; padding-top: 12px; border-top: 1.5px solid currentColor; display: flex; justify-content: space-between; gap: 8px; }
+.none { padding: 28px; border: 2px dashed var(--hair); color: var(--muted); border-radius: 4px; }
+
+/* Archivo */
+.archive { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 0; border-top: 2px solid var(--line); border-left: 2px solid var(--line); }
+.card {
+  text-align: left; cursor: pointer; background: var(--bg); border: 0; border-right: 2px solid var(--line); border-bottom: 2px solid var(--line);
+  padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 10px; min-height: 230px; min-width: 0; position: relative; transition: background 0.15s ease, color 0.15s ease;
+}
+.card:hover { background: var(--pig); color: var(--pig-ink); }
+.card:hover .card-src, .card:hover .card-where { color: inherit; opacity: 0.85; }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+.card-who { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+.card-who i { width: 12px; height: 12px; background: var(--pig); border-radius: 2px; outline: 1.5px solid var(--ink); outline-offset: -1.5px; }
+.card:hover .card-who i { outline-color: currentColor; }
+.card h3 { font: 700 23px/1.05 var(--display); font-variation-settings: "wdth" 85; letter-spacing: -0.02em; margin: 6px 0 0; text-wrap: balance; }
+.card-where { font-size: 13px; color: var(--muted); }
+.card-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: end; gap: 8px; flex-wrap: wrap; }
+.card-date { font: 500 13px/1.2 var(--mono); font-variant-numeric: tabular-nums; }
+.card-src { font: 500 11px/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.badge { font: 600 10px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 7px; border-radius: 2px; }
+.badge.warn { background: var(--warn); color: #0b0b0c; }
+.badge.new { background: var(--ink); color: var(--bg); }
+.card .plus { position: absolute; right: 16px; bottom: 14px; font: 400 26px/1 var(--display); opacity: 0; transition: opacity 0.15s; }
+.card:hover .plus { opacity: 1; }
+.card:hover .card-src { opacity: 0; }
+
+/* Artistas */
+.roster { border-top: 2px solid var(--line); }
+.artist { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) auto; gap: 18px 28px; align-items: center; padding-block: 18px; border-bottom: 2px solid var(--line); }
+@media (max-width: 860px) { .artist { grid-template-columns: minmax(0, 1fr); } }
+.artist-name { display: flex; align-items: center; gap: 14px; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; font: 800 clamp(28px, 4vw, 52px)/0.95 var(--display); font-variation-settings: "wdth" 78; letter-spacing: -0.035em; text-transform: uppercase; }
+.artist-name i { flex: none; width: 0.6em; height: 0.6em; background: var(--pig); border-radius: 50%; }
+.artist-name:hover { color: var(--pig); }
+.artist-info { font-size: 14px; color: var(--muted); min-width: 0; }
+.artist-info .next { color: var(--ink); font-weight: 600; display: block; margin-bottom: 4px; }
+.links { display: flex; gap: 8px; flex-wrap: wrap; }
+.links a { font: 500 12px/1 var(--mono); text-decoration: none; padding: 8px 10px; border: 1.5px solid var(--line); border-radius: 999px; white-space: nowrap; }
+.links a:hover { background: var(--ink); color: var(--bg); }
+
+/* Registro */
+.log { display: grid; gap: 0; border-top: 2px solid var(--line); font-size: 14px; }
+.log div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; padding-block: 10px; border-bottom: 1px solid var(--hair); }
+.log time { font: 500 13px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+footer { padding-block: 64px 40px; font: 500 12px/1.6 var(--mono); color: var(--muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* ——— Panel de detalle ——— */
+dialog.panel {
+  margin: 0 0 0 auto; height: 100%; max-height: 100%; width: min(560px, 100%); max-width: 100%; border: 0; padding: 0;
+  background: var(--bg); color: var(--ink); border-left: 2px solid var(--line);
+}
+dialog.panel::backdrop { background: rgb(11 11 12 / 0.55); }
+@media (prefers-reduced-motion: no-preference) { dialog.panel[open] { animation: panel-in 0.28s cubic-bezier(.2,.8,.2,1); } }
+@keyframes panel-in { from { transform: translateX(40px); opacity: 0; } }
+.p-head { background: var(--pig); color: var(--pig-ink); padding: 20px 24px 26px; display: grid; gap: 14px; }
+.p-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; }
+.p-close { background: none; border: 2px solid currentColor; border-radius: 999px; width: 40px; height: 40px; cursor: pointer; font: 400 20px/1 var(--body); }
+.p-head h2 { font: 800 clamp(32px, 6vw, 48px)/0.95 var(--display); font-variation-settings: "wdth" 80; letter-spacing: -0.035em; margin: 8px 0 0; text-wrap: balance; }
+.p-head .p-when { font: 600 15px/1.3 var(--mono); }
+.p-body { padding: 24px; display: grid; gap: 22px; }
+.p-body .p-where { font-weight: 600; }
+.p-body p { margin: 0; max-width: 62ch; }
+.p-body h4 { font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0 0 10px; }
+.p-links { display: grid; gap: 0; border-top: 2px solid var(--line); }
+.p-links a { display: flex; justify-content: space-between; gap: 12px; padding: 14px 2px; border-bottom: 2px solid var(--line); text-decoration: none; font-weight: 600; }
+.p-links a::after { content: "↗"; font-family: var(--display); }
+.p-links a:hover { padding-left: 10px; transition: padding 0.15s; }
+.p-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 999px; border: 2px solid var(--line); background: var(--ink); color: var(--bg); font: 600 14px/1 var(--body); cursor: pointer; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.p-note { font-size: 13px; color: var(--muted); padding: 12px 14px; background: var(--soft); border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="live" id="stamp">Cargando…</span>
+    <span>Pintura figurativa en España · se actualiza cada día a las 8:00</span>
+  </div>
+
+  <header class="hero">
+    <h1 class="wordmark">Radar<span class="dot"></span><span class="es">España</span></h1>
+    <div class="hero-row">
+      <p class="lede">Pintores figurativos españoles y todo lo figurativo que pasa en España: exposiciones, talleres, charlas, certámenes y prensa, con su fuente.</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+<main class="wrap">
+  <nav class="filters" id="filters" aria-label="Filtrar por artista" style="margin-top:28px"></nav>
+
+  <section id="proximamente" style="padding-top:12px">
+    <div class="sec-head">
+      <h2>Próximamente</h2>
+      <p>Exposiciones abiertas, talleres y charlas que aún no han terminado. Pulsa una tarjeta para ver el detalle y añadirla a tu calendario.</p>
+    </div>
+    <div class="upcoming" id="upcoming"></div>
+  </section>
+
+  <section id="archivo">
+    <div class="sec-head">
+      <h2>Archivo</h2>
+      <p>Todo lo publicado, de lo más reciente a lo más antiguo.</p>
+    </div>
+    <div class="archive" id="archive"></div>
+  </section>
+
+  <section id="artistas">
+    <div class="sec-head">
+      <h2>Artistas</h2>
+      <p>Los de la lista se siguen a diario. Debajo, los que ha ido descubriendo el agente. Para añadir uno a la lista, pídeselo a Claude o edita <code>data/artistas.json</code> en GitHub.</p>
+    </div>
+    <div class="roster" id="roster"></div>
+  </section>
+
+  <section id="registro">
+    <div class="sec-head"><h2>Registro</h2><p>Cada pasada del agente.</p></div>
+    <div class="log" id="log"></div>
+  </section>
+
+  <footer>
+    <span>«Sin confirmar» = el agente no pudo abrir la fuente original para comprobar la fecha.</span>
+    <a href="https://github.com/josepsegarra/radar-espana">Código y datos en GitHub ↗</a>
+  </footer>
+</main>
+
+<dialog class="panel" id="panel" aria-labelledby="p-title">
+  <div class="p-head">
+    <div class="p-bar"><span id="p-kind"></span><button class="p-close" id="p-close" aria-label="Cerrar">×</button></div>
+    <span class="p-bar" id="p-artist"></span>
+    <h2 id="p-title"></h2>
+    <span class="p-when" id="p-when"></span>
+  </div>
+  <div class="p-body" id="p-body"></div>
+</dialog>
+
+<script>
+const PIGMENTOS = [
+  { c: "#e4352a", t: "#ffffff" }, // rojo cadmio
+  { c: "#1e4bd2", t: "#ffffff" }, // azul cobalto
+  { c: "#00866b", t: "#ffffff" }, // verde viridiana
+  { c: "#f2b705", t: "#0b0b0c" }, // amarillo cadmio
+  { c: "#5b2bb5", t: "#ffffff" }, // violeta dioxazina
+  { c: "#d6246e", t: "#ffffff" }, // rosa quinacridona
+  { c: "#1a8fc9", t: "#0b0b0c" }, // cerúleo
+  { c: "#b4512a", t: "#ffffff" }, // siena tostada
+  { c: "#0b5d4b", t: "#ffffff" }, // verde ftalo
+  { c: "#3a3fb0", t: "#ffffff" }, // ultramar
+  { c: "#9e1b32", t: "#ffffff" }, // alizarina
+  { c: "#c8961e", t: "#0b0b0c" }, // ocre amarillo
+  { c: "#1fa39a", t: "#0b0b0c" }, // turquesa cobalto
+  { c: "#7a4a8c", t: "#ffffff" }  // violeta de manganeso
+];
+const NEUTRO = { c: "#6b6b66", t: "#ffffff" };
+const DESC = "__descubiertos__";
+const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const HOY = new Date(); HOY.setHours(0,0,0,0);
+const iso2date = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y, m-1, d); };
+const fmt = s => { const d = iso2date(s); return `${d.getDate()} ${MESES[d.getMonth()]} ${d.getFullYear()}`; };
+const dias = s => Math.round((iso2date(s) - HOY) / 864e5);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const link = (text, url, cls) => { const a = el("a", cls, text); a.href = url; a.target = "_blank"; a.rel = "noopener"; return a; };
+
+const S = { artistas: [], menciones: [], registro: [], filtro: null, color: {} };
+
+const pig = nombre => S.color[nombre] || NEUTRO;
+const enLista = nombre => S.artistas.some(a => a.nombre === nombre);
+const esDesc = m => m.descubierto || !enLista(m.artista);
+const paint = (node, nombre) => { const p = pig(nombre); node.style.setProperty("--pig", p.c); node.style.setProperty("--pig-ink", p.t); };
+const esFutura = m => m.continuo || (m.fin ? dias(m.fin) >= 0 : dias(m.inicio) >= 0);
+const visibles = () => S.menciones.filter(m => !S.filtro || (S.filtro === DESC ? esDesc(m) : m.artista === S.filtro));
+const esNueva = m => S.registro.length > 1 && m.anadido === S.registro[0].fecha && S.registro[0].nuevas > 0;
+
+function cuenta(m) {
+  if (m.continuo) return { n: "∞", u: "todo el año" };
+  const a = dias(m.inicio);
+  if (a > 0) return { n: a, u: a === 1 ? "día" : "días" };
+  const f = m.fin ? dias(m.fin) : 0;
+  return { n: "Ya", u: f > 0 ? `abierta · quedan ${f} d` : "último día" };
+}
+
+function renderStats() {
+  const fut = S.menciones.filter(esFutura);
+  const prox = fut.filter(m => !m.continuo && dias(m.inicio) > 0).sort((a, b) => a.inicio.localeCompare(b.inicio))[0];
+  const box = document.getElementById("stats");
+  box.replaceChildren();
+  const add = (n, t) => { const d = el("div", "stat"); d.append(el("b", null, String(n)), el("span", null, t)); box.append(d); };
+  add(S.artistas.length, "artistas");
+  add(S.menciones.length, "menciones");
+  add(fut.length, "en agenda");
+  if (prox) { const d = dias(prox.inicio); add(d > 0 ? d : "Hoy", d > 0 ? "días a la próxima" : "hay algo abierto"); }
+  const last = S.registro[0];
+  document.getElementById("stamp").textContent = last ? `Última pasada · ${fmt(last.fecha)}` : "Sin pasadas todavía";
+}
+
+function renderTicker() {
+  const items = [...S.menciones].sort((a, b) => b.anadido.localeCompare(a.anadido) || b.inicio.localeCompare(a.inicio)).slice(0, 8);
+  const t = document.getElementById("ticker");
+  t.replaceChildren();
+  for (let k = 0; k < 2; k++) for (const m of items) {
+    const s = el("span"); const i = el("i"); i.style.background = pig(m.artista).c;
+    s.append(i, `${m.artista.toUpperCase()} — ${m.titulo} · ${m.fecha}`);
+    t.append(s);
+  }
+}
+
+function renderFilters() {
+  const nav = document.getElementById("filters");
+  nav.replaceChildren();
+  const mk = (nombre, label, n) => {
+    const b = el("button", "chip"); b.type = "button";
+    b.setAttribute("aria-pressed", String(S.filtro === nombre));
+    if (nombre) { const i = el("i"); i.style.background = nombre === DESC ? "transparent" : pig(nombre).c; if (nombre === DESC) i.style.border = "2px dashed currentColor"; b.append(i); }
+    b.append(label, el("span", "n", String(n)));
+    b.onclick = () => setFiltro(nombre);
+    nav.append(b);
+  };
+  mk(null, "Todos", S.menciones.length);
+  for (const a of S.artistas) mk(a.nombre, a.nombre, S.menciones.filter(m => m.artista === a.nombre).length);
+  const nd = S.menciones.filter(esDesc).length;
+  if (nd) mk(DESC, "Descubiertos", nd);
+}
+
+function setFiltro(nombre) {
+  S.filtro = nombre;
+  history.replaceState(null, "", nombre ? "#" + (nombre === DESC ? "descubiertos" : nombre.replace(/\s+/g, "-")) : location.pathname);
+  renderFilters(); renderUpcoming(); renderArchive();
+}
+
+function renderUpcoming() {
+  const box = document.getElementById("upcoming");
+  box.replaceChildren();
+  const items = visibles().filter(esFutura).sort((a, b) => (!!a.continuo - !!b.continuo) || a.inicio.localeCompare(b.inicio));
+  if (!items.length) { box.append(el("div", "none", S.filtro ? `No hay nada anunciado de ${S.filtro === DESC ? "artistas descubiertos" : S.filtro} por ahora. El agente lo añadirá en cuanto aparezca.` : "No hay nada anunciado por ahora.")); return; }
+  for (const m of items) {
+    const b = el("button", "up"); b.type = "button"; paint(b, m.artista);
+    const k = el("div", "kind"); k.append(el("span", null, m.tipo), el("span", null, m.confirmado ? "" : "Sin confirmar"));
+    const c = cuenta(m); const n = el("div", "count", String(c.n)); n.append(el("small", null, c.u));
+    const who = el("div", "who"); who.append(el("span", null, m.artista), el("span", null, m.fecha));
+    b.append(k, n, el("h3", null, m.titulo), el("div", "where", m.lugar), who);
+    b.onclick = () => abrir(m);
+    box.append(b);
+  }
+}
+
+function renderArchive() {
+  const box = document.getElementById("archive");
+  box.replaceChildren();
+  const items = visibles().sort((a, b) => b.inicio.localeCompare(a.inicio));
+  for (const m of items) {
+    const b = el("button", "card"); b.type = "button"; paint(b, m.artista);
+    const top = el("div", "card-top");
+    const who = el("span", "card-who"); who.append(el("i"), m.artista);
+    top.append(who, el("span", null, m.tipo));
+    const foot = el("div", "card-foot");
+    const left = el("div"); left.style.display = "flex"; left.style.gap = "6px"; left.style.alignItems = "center"; left.style.flexWrap = "wrap";
+    left.append(el("span", "card-date", m.fecha));
+    if (!m.confirmado) left.append(el("span", "badge warn", "Sin confirmar"));
+    if (esNueva(m)) left.append(el("span", "badge new", "Nuevo"));
+    foot.append(left, el("span", "card-src", m.fuente));
+    b.append(top, el("h3", null, m.titulo), el("div", "card-where", m.lugar), foot, el("span", "plus", "+"));
+    b.onclick = () => abrir(m);
+    box.append(b);
+  }
+}
+
+function renderRoster() {
+  const box = document.getElementById("roster");
+  box.replaceChildren();
+  for (const a of S.artistas) {
+    const row = el("div", "artist"); paint(row, a.nombre);
+    const name = el("button", "artist-name"); name.type = "button"; name.append(el("i"), a.nombre);
+    name.onclick = () => { setFiltro(a.nombre); document.getElementById("proximamente").scrollIntoView({ behavior: "smooth" }); };
+    const info = el("div", "artist-info");
+    const next = S.menciones.filter(m => m.artista === a.nombre && esFutura(m) && !m.continuo).sort((x, y) => x.inicio.localeCompare(y.inicio))[0];
+    info.append(el("span", "next", next ? `Próximo: ${next.titulo} · ${next.fecha}` : "Nada anunciado por ahora"), a.pistas);
+    const links = el("div", "links");
+    if (a.web) links.append(link("Web", a.web));
+    for (const l of a.enlaces || []) links.append(link(l.texto, l.url));
+    row.append(name, info, links);
+    box.append(row);
+  }
+  const otros = {};
+  for (const m of S.menciones.filter(esDesc)) otros[m.artista] = (otros[m.artista] || 0) + 1;
+  const nombres = Object.keys(otros).sort();
+  if (nombres.length) {
+    const row = el("div", "artist"); paint(row, "");
+    const name = el("button", "artist-name"); name.type = "button"; name.append(el("i"), "Descubiertos");
+    name.onclick = () => { setFiltro(DESC); document.getElementById("proximamente").scrollIntoView({ behavior: "smooth" }); };
+    const info = el("div", "artist-info");
+    info.append(el("span", "next", `${nombres.length} ${nombres.length === 1 ? "nombre" : "nombres"} fuera de la lista`), nombres.map(n => `${n} (${otros[n]})`).join(" · "));
+    row.append(name, info, el("div", "links"));
+    box.append(row);
+  }
+}
+
+function renderLog() {
+  const box = document.getElementById("log");
+  box.replaceChildren(...S.registro.slice(0, 14).map(r => { const d = el("div"); d.append(el("time", null, fmt(r.fecha)), el("span", null, r.resumen)); return d; }));
+}
+
+/* ——— Panel ——— */
+const panel = document.getElementById("panel");
+document.getElementById("p-close").onclick = () => panel.close();
+panel.addEventListener("click", e => { if (e.target === panel) panel.close(); });
+
+function ics(m) {
+  const d = s => s.replaceAll("-", "");
+  const finExcl = (() => { const f = iso2date(m.fin || m.inicio); f.setDate(f.getDate() + 1); return `${f.getFullYear()}${String(f.getMonth()+1).padStart(2,"0")}${String(f.getDate()).padStart(2,"0")}`; })();
+  const esc = s => String(s).replace(/[\\,;]/g, c => "\\" + c).replace(/\n/g, "\\n");
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Radar figurativo España//ES","BEGIN:VEVENT",
+    `UID:${d(m.inicio)}-${m.artista.replace(/\W/g,"")}@radar-espana`,
+    `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,"").slice(0,15)}Z`,
+    `DTSTART;VALUE=DATE:${d(m.inicio)}`, `DTEND;VALUE=DATE:${finExcl}`,
+    `SUMMARY:${esc(m.artista + " · " + m.titulo)}`, `LOCATION:${esc(m.lugar)}`,
+    `DESCRIPTION:${esc(m.que + "\n" + m.url)}`, `URL:${m.url}`,
+    "END:VEVENT","END:VCALENDAR"].join("\r\n");
+}
+
+function abrir(m) {
+  paint(panel, m.artista);
+  document.getElementById("p-kind").textContent = m.tipo + (m.confirmado ? "" : " · sin confirmar");
+  document.getElementById("p-artist").textContent = m.artista;
+  document.getElementById("p-title").textContent = m.titulo;
+  document.getElementById("p-when").textContent = m.fecha + (esFutura(m) && !m.continuo ? ` · ${cuenta(m).n} ${cuenta(m).u}` : "");
+  const body = document.getElementById("p-body");
+  body.replaceChildren();
+  body.append(el("div", "p-where", m.lugar), el("p", null, m.que));
+  if (m.detalle) body.append(el("p", null, m.detalle));
+  if (!m.confirmado) body.append(el("div", "p-note", "El agente no pudo abrir la página original para comprobar las fechas. Confírmalas antes de planear nada."));
+  const acts = el("div", "p-actions");
+  acts.append(link("Ver la fuente: " + m.fuente, m.url, "btn"));
+  if (esFutura(m) && !m.continuo) {
+    const b = el("a", "btn ghost", "Añadir al calendario");
+    b.href = URL.createObjectURL(new Blob([ics(m)], { type: "text/calendar" }));
+    b.download = `${m.artista} - ${m.titulo}.ics`.replace(/[\/:*?"<>|]/g, "");
+    acts.append(b);
+  }
+  body.append(acts);
+  const extra = [...(m.enlaces || [])];
+  const a = S.artistas.find(x => x.nombre === m.artista);
+  if (a?.web && !extra.some(l => l.url === a.web)) extra.push({ texto: `Web de ${m.artista}`, url: a.web });
+  if (extra.length) {
+    const wrap = el("div"); wrap.append(el("h4", null, "Enlaces de interés"));
+    const list = el("div", "p-links"); for (const l of extra) list.append(link(l.texto, l.url));
+    wrap.append(list); body.append(wrap);
+  }
+  panel.showModal();
+}
+
+async function load() {
+  try {
+    const get = f => fetch(`data/${f}?t=${Date.now()}`).then(r => { if (!r.ok) throw new Error(f); return r.json(); });
+    [S.artistas, S.menciones, S.registro] = await Promise.all([get("artistas.json"), get("menciones.json"), get("registro.json")]);
+    S.menciones.forEach(m => { m.inicio ??= m.orden; });
+    S.registro.sort((a, b) => b.fecha.localeCompare(a.fecha));
+    S.artistas.forEach((a, i) => { S.color[a.nombre] = PIGMENTOS[i % PIGMENTOS.length]; });
+    const h = decodeURIComponent(location.hash.slice(1)).replace(/-/g, " ");
+    S.filtro = h === "descubiertos" ? DESC : S.artistas.some(a => a.nombre === h) ? h : null;
+    renderStats(); renderTicker(); renderFilters(); renderUpcoming(); renderArchive(); renderRoster(); renderLog();
+  } catch (e) {
+    document.getElementById("upcoming").replaceChildren(el("div", "none", "No se han podido cargar los datos. Si abres el archivo desde el disco, sírvelo con un servidor local: python3 -m http.server"));
+    document.getElementById("stamp").textContent = "Error al cargar";
+  }
+}
+load();
+</script>
+</body>
+</html>

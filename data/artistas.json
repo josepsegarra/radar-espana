@@ -1,0 +1,109 @@
+[
+  {
+    "nombre": "Antonio López García",
+    "pistas": "Tomelloso, 1936. Referente del realismo madrileño. Web oficial: antoniolopezweboficial.com. No confundir con otros Antonio López.",
+    "web": "https://www.antoniolopezweboficial.com/",
+    "enlaces": [
+      {
+        "texto": "Noticias en su web",
+        "url": "https://en.antoniolopezweboficial.com/noticias"
+      }
+    ]
+  },
+  {
+    "nombre": "María Moreno",
+    "pistas": "Madrid, 1933. Pintora realista del grupo madrileño, esposa de Antonio López. Jardines, interiores, vistas de Madrid.",
+    "web": "https://www.antoniolopezweboficial.com/",
+    "enlaces": [
+      {
+        "texto": "MUREC",
+        "url": "https://murecalmeria.es/"
+      }
+    ]
+  },
+  {
+    "nombre": "Andrés García Ibáñez",
+    "pistas": "Pintor almeriense. Retrato, paisaje, mitología. Vinculado al MUREC y a la Fundación de Arte Ibáñez Cosentino; colaborador de Antonio López.",
+    "web": "https://www.hoyesarte.com/evento/2026/09/andres-garcia-ibanez-una-mirada-al-realismo-espanol/",
+    "enlaces": []
+  },
+  {
+    "nombre": "Golucho",
+    "pistas": "Miguel Ángel Rodríguez «Golucho», Madrid, 1949; vive en Alcoy. Nuevo realismo, cofundador de La Gallina Ciega. Retrato crudo y matérico.",
+    "web": "https://www.arteinformado.com/guia/f/golucho-5847",
+    "enlaces": []
+  },
+  {
+    "nombre": "Pedro Campos",
+    "pistas": "Madrid, 1966. Hiperrealismo de bodegón (latas, frutas envueltas, canicas); antes restaurador. Galería: Plus One (Londres). No confundir con homónimos.",
+    "web": "https://www.plusonegallery.com/artists/81/",
+    "enlaces": [
+      {
+        "texto": "Instagram",
+        "url": "https://www.instagram.com/pedrocampos_art/"
+      }
+    ]
+  },
+  {
+    "nombre": "Dino Valls",
+    "pistas": "Zaragoza, 1959. Figuración de técnica antigua (temple y óleo), psicológica y simbólica. Médico de formación.",
+    "web": "https://dinovalls.com/curriculum",
+    "enlaces": []
+  },
+  {
+    "nombre": "Javier Arizabalo",
+    "pistas": "Nacido en Francia en 1965, vive en Irún. Hiperrealismo; imparte talleres de 2 a 5 días por España y Europa.",
+    "web": "https://javierarizabalo.net/es",
+    "enlaces": [
+      {
+        "texto": "Talleres",
+        "url": "https://javierarizabalo.net/es/talleres"
+      }
+    ]
+  },
+  {
+    "nombre": "Guillermo Muñoz Vera",
+    "pistas": "Concepción (Chile), 1956; afincado en España. Realismo; Forum Gallery (Nueva York), Galería Duque Arango.",
+    "web": "https://www.forumgallery.com/artists/guillermo-munoz-vera/biography",
+    "enlaces": []
+  },
+  {
+    "nombre": "Eduardo Naranjo",
+    "pistas": "Monesterio (Badajoz), 1944. Realismo mágico y onírico. Galería BAT.",
+    "web": "https://galeriabat.com/es/shop/artista/eduardo-naranjo",
+    "enlaces": []
+  },
+  {
+    "nombre": "Carlos Morago",
+    "pistas": "Madrid, 1954. Interiores vacíos y paisaje urbano en grises y blancos. Galería Ansorena. Académico correspondiente de Santa Isabel de Hungría.",
+    "web": "https://galeria.ansorena.com/es/exposicion/carlos-morago_131-001",
+    "enlaces": []
+  },
+  {
+    "nombre": "Isabel Guerra",
+    "pistas": "Madrid, 1947. Monja cisterciense en Zaragoza, «la pintora de la luz». Bodegones, escenas cotidianas, pintura religiosa.",
+    "web": "https://www.arteinformado.com/guia/f/isabel-guerra-19711",
+    "enlaces": []
+  },
+  {
+    "nombre": "Paco Pomet",
+    "pistas": "Granada, 1970. Figuración surreal a partir de fotos antiguas. Galerías: My Name's Lolita Art, Richard Heller.",
+    "web": "https://www.mynameslolita.com/artistas/paco-pomet/",
+    "enlaces": []
+  },
+  {
+    "nombre": "Alberto Romero Gil",
+    "pistas": "Mataró, 1978. Discípulo de Antonio López. Profesor en Bellas Artes (UB), La Salle y Massana. Galerías: Sala Parés, Ansorena, Haurie, PontARTE.",
+    "web": "http://www.albertoromerogil.com/trayectoria/",
+    "enlaces": [
+      {
+        "texto": "Sala Parés",
+        "url": "https://salapares.com/en/artista/alberto-romero-gil/"
+      },
+      {
+        "texto": "YouTube",
+        "url": "https://www.youtube.com/@albertoromerogil"
+      }
+    ]
+  }
+]
