@@ -261,5 +261,62 @@
     "enlaces": [],
     "confirmado": false,
     "anadido": "2026-09-30"
+  },
+  {
+    "artista": "Varios artistas",
+    "descubierto": true,
+    "continuo": false,
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "anadido": "2026-09-30",
+    "inicio": "2026-09-01",
+    "fin": "2026-10-15",
+    "fecha": "1 sep – 15 oct 2026",
+    "tipo": "Certamen",
+    "titulo": "V Premio Almuzara de Pintura",
+    "lugar": "Editorial Almuzara · Madrid",
+    "que": "Convocatoria de pintura figurativa sobre literatura y el mundo de los libros, con 10.000 € de premio.",
+    "detalle": "Abierto a mayores de 18 años de cualquier nacionalidad con residencia legal en España. Técnica libre; no se admiten obras digitales ni composiciones de varios elementos que requieran montaje. El fallo se anunciará en la inauguración de la exposición de diciembre en la sede de la editorial, en el Barrio de las Letras de Madrid.",
+    "fuente": "Masdearte",
+    "url": "https://masdearte.com/convocatorias/v-premio-almuzara-de-pintura-2026/",
+    "enlaces": [
+      {
+        "texto": "Ficha en ArteInformado",
+        "url": "https://www.arteinformado.com/agenda/f/v-premio-almuzara-de-pintura-243272"
+      }
+    ],
+    "contrastes": [
+      "https://masdearte.com/convocatorias/v-premio-almuzara-de-pintura-2026/",
+      "https://www.arteinformado.com/agenda/f/v-premio-almuzara-de-pintura-243272",
+      "https://www.que-leer.com/2026/08/01/los-libros-se-convierten-en-pintura-en-el-premio-almuzara-de-pintura"
+    ]
+  },
+  {
+    "artista": "Varios artistas",
+    "descubierto": true,
+    "continuo": false,
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "anadido": "2026-09-30",
+    "inicio": "2026-11-12",
+    "fin": "2026-11-29",
+    "fecha": "12 – 29 nov 2026 (Madrid)",
+    "tipo": "Exposición",
+    "titulo": "The MEAM Hall, 8.ª edición",
+    "lugar": "MEAM · Barcelona y Madrid",
+    "que": "Exposición colectiva internacional de pequeño formato del Museo Europeo de Arte Moderno, que tras Barcelona viaja a Madrid.",
+    "detalle": "En Barcelona se ve en el Palau Gomis del 10 de julio al 1 de noviembre de 2026; la itinerancia a Madrid es del 12 al 29 de noviembre de 2026. Los resultados de búsqueda no detallan sala madrileña, horarios ni precio.",
+    "fuente": "MEAM",
+    "url": "https://www.meam.es/es/exhibitions/upcoming/",
+    "enlaces": [
+      {
+        "texto": "Noticia en Descubrir el Arte",
+        "url": "https://www.descubrirelarte.es/2026/02/23/el-meam-impulsa-la-8a-edicion-de-the-meam-hall-en-barcelona-y-madrid.html"
+      }
+    ],
+    "contrastes": [
+      "https://www.meam.es/es/exhibitions/upcoming/",
+      "https://www.descubrirelarte.es/2026/02/23/el-meam-impulsa-la-8a-edicion-de-the-meam-hall-en-barcelona-y-madrid.html"
+    ]
   }
 ]
