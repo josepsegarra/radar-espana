@@ -114,6 +114,7 @@ section { padding-block: clamp(40px, 6vw, 80px) 0; }
 .card-src { font: 500 11px/1 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 .badge { font: 600 10px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 7px; border-radius: 2px; }
 .badge.warn { background: var(--warn); color: #0b0b0c; }
+.badge.soft { border: 1.5px solid currentColor; padding: 3.5px 6px; }
 .badge.new { background: var(--ink); color: var(--bg); }
 .card .plus { position: absolute; right: 16px; bottom: 14px; font: 400 26px/1 var(--display); opacity: 0; transition: opacity 0.15s; }
 .card:hover .plus { opacity: 1; }
@@ -217,7 +218,7 @@ dialog.panel::backdrop { background: rgb(11 11 12 / 0.55); }
   </section>
 
   <footer>
-    <span>«Sin confirmar» = el agente no pudo abrir la fuente original para comprobar la fecha.</span>
+    <span>«Contrastado» = el agente no pudo abrir la fuente original, pero varias fuentes coinciden. «Sin confirmar» = una sola fuente sin comprobar.</span>
     <a href="https://github.com/josepsegarra/radar-espana">Código y datos en GitHub ↗</a>
   </footer>
 </main>
@@ -267,6 +268,7 @@ const esDesc = m => m.descubierto || !enLista(m.artista);
 const paint = (node, nombre) => { const p = pig(nombre); node.style.setProperty("--pig", p.c); node.style.setProperty("--pig-ink", p.t); };
 const esFutura = m => m.continuo || (m.fin ? dias(m.fin) >= 0 : dias(m.inicio) >= 0);
 const visibles = () => S.menciones.filter(m => !S.filtro || (S.filtro === DESC ? esDesc(m) : m.artista === S.filtro));
+const estado = m => m.confirmado ? null : (m.verificacion === "busquedas" ? "Contrastado" : "Sin confirmar");
 const esNueva = m => S.registro.length > 1 && m.anadido === S.registro[0].fecha && S.registro[0].nuevas > 0;
 
 function cuenta(m) {
@@ -332,7 +334,7 @@ function renderUpcoming() {
   if (!items.length) { box.append(el("div", "none", S.filtro ? `No hay nada anunciado de ${S.filtro === DESC ? "artistas descubiertos" : S.filtro} por ahora. El agente lo añadirá en cuanto aparezca.` : "No hay nada anunciado por ahora.")); return; }
   for (const m of items) {
     const b = el("button", "up"); b.type = "button"; paint(b, m.artista);
-    const k = el("div", "kind"); k.append(el("span", null, m.tipo), el("span", null, m.confirmado ? "" : "Sin confirmar"));
+    const k = el("div", "kind"); k.append(el("span", null, m.tipo), el("span", null, estado(m) || ""));
     const c = cuenta(m); const n = el("div", "count", String(c.n)); n.append(el("small", null, c.u));
     const who = el("div", "who"); who.append(el("span", null, m.artista), el("span", null, m.fecha));
     b.append(k, n, el("h3", null, m.titulo), el("div", "where", m.lugar), who);
@@ -353,7 +355,7 @@ function renderArchive() {
     const foot = el("div", "card-foot");
     const left = el("div"); left.style.display = "flex"; left.style.gap = "6px"; left.style.alignItems = "center"; left.style.flexWrap = "wrap";
     left.append(el("span", "card-date", m.fecha));
-    if (!m.confirmado) left.append(el("span", "badge warn", "Sin confirmar"));
+    if (estado(m)) left.append(el("span", estado(m) === "Contrastado" ? "badge soft" : "badge warn", estado(m)));
     if (esNueva(m)) left.append(el("span", "badge new", "Nuevo"));
     foot.append(left, el("span", "card-src", m.fuente));
     b.append(top, el("h3", null, m.titulo), el("div", "card-where", m.lugar), foot, el("span", "plus", "+"));
@@ -417,7 +419,7 @@ function ics(m) {
 
 function abrir(m) {
   paint(panel, m.artista);
-  document.getElementById("p-kind").textContent = m.tipo + (m.confirmado ? "" : " · sin confirmar");
+  document.getElementById("p-kind").textContent = m.tipo + (estado(m) ? " · " + estado(m).toLowerCase() : "");
   document.getElementById("p-artist").textContent = m.artista;
   document.getElementById("p-title").textContent = m.titulo;
   document.getElementById("p-when").textContent = m.fecha + (esFutura(m) && !m.continuo ? ` · ${cuenta(m).n} ${cuenta(m).u}` : "");
@@ -425,7 +427,8 @@ function abrir(m) {
   body.replaceChildren();
   body.append(el("div", "p-where", m.lugar), el("p", null, m.que));
   if (m.detalle) body.append(el("p", null, m.detalle));
-  if (!m.confirmado) body.append(el("div", "p-note", "El agente no pudo abrir la página original para comprobar las fechas. Confírmalas antes de planear nada."));
+  if (estado(m) === "Contrastado") body.append(el("div", "p-note", "El agente no pudo abrir la página original, pero varias fuentes coinciden en las fechas (las tienes abajo). Confírmalas antes de planear nada."));
+  else if (estado(m)) body.append(el("div", "p-note", "El agente no pudo abrir la página original para comprobar las fechas. Confírmalas antes de planear nada."));
   const acts = el("div", "p-actions");
   acts.append(link("Ver la fuente: " + m.fuente, m.url, "btn"));
   if (esFutura(m) && !m.continuo) {
@@ -441,6 +444,11 @@ function abrir(m) {
   if (extra.length) {
     const wrap = el("div"); wrap.append(el("h4", null, "Enlaces de interés"));
     const list = el("div", "p-links"); for (const l of extra) list.append(link(l.texto, l.url));
+    wrap.append(list); body.append(wrap);
+  }
+  if (m.contrastes?.length) {
+    const wrap = el("div"); wrap.append(el("h4", null, "Fuentes contrastadas"));
+    const list = el("div", "p-links"); for (const u of m.contrastes) { let h = u; try { h = new URL(u).hostname.replace(/^www\./, ""); } catch {} list.append(link(h, u)); }
     wrap.append(list); body.append(wrap);
   }
   panel.showModal();
