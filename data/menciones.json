@@ -244,5 +244,22 @@
     "enlaces": [],
     "confirmado": true,
     "anadido": "2026-09-30"
+  },
+  {
+    "artista": "Varios artistas",
+    "descubierto": true,
+    "inicio": "2026-08-01",
+    "fin": "2026-12-31",
+    "fecha": "1 ago – 31 dic 2026",
+    "tipo": "Certamen",
+    "titulo": "Modportrait 2026, retrato figurativo",
+    "lugar": "Galería Artelibre · Zaragoza",
+    "que": "Concurso internacional de retrato figurativo contemporáneo organizado desde Zaragoza.",
+    "detalle": "El plazo de inscripción oficial va del 1 de agosto al 31 de diciembre de 2026. Según el resumen de búsqueda, lo organiza la Galería Artelibre. No se pudo abrir la página original para confirmar premios, tasas ni fechas de resolución.",
+    "fuente": "Modportrait",
+    "url": "https://www.modportrait.net/bases-rules/",
+    "enlaces": [],
+    "confirmado": false,
+    "anadido": "2026-09-30"
   }
 ]

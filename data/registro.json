@@ -1,6 +1,11 @@
 [
   {
     "fecha": "2026-09-30",
+    "nuevas": 1,
+    "resumen": "1 nueva: descubierta (certamen Modportrait, sin confirmar en la página original por bloqueo de red). Resto de búsquedas sin novedades verificables."
+  },
+  {
+    "fecha": "2026-09-30",
     "nuevas": 14,
     "resumen": "Carga inicial: 14 menciones verificadas (12 de 7 artistas de la lista y 2 actividades descubiertas)."
   }
