@@ -318,5 +318,26 @@
       "https://www.meam.es/es/exhibitions/upcoming/",
       "https://www.descubrirelarte.es/2026/02/23/el-meam-impulsa-la-8a-edicion-de-the-meam-hall-en-barcelona-y-madrid.html"
     ]
+  },
+  {
+    "artista": "Varios artistas",
+    "descubierto": true,
+    "inicio": "2026-10-03",
+    "fin": null,
+    "fecha": "3 oct 2026",
+    "tipo": "Certamen",
+    "titulo": "XXXV Certamen de Pintura Rápida «Jesús Horche»",
+    "lugar": "Ayuntamiento de Horche · Horche (Guadalajara)",
+    "que": "Certamen internacional de pintura rápida al aire libre con tema obligado Horche y su entorno, dentro de una tendencia figurativa.",
+    "detalle": "Cada participante presenta una obra de entre 45 cm (lado menor mínimo) y 150 cm (lado mayor máximo). Primer premio 1.000 €, segundo 850 €, tercero por voto popular 700 €, accésit de estilo libre 500 € y premio local 300 €; hay también premio infantil con material donado.",
+    "fuente": "Ayuntamiento de Horche",
+    "url": "https://www.horche.org/actualidad/agenda/xxxv-certamen-internacional-de-pintura-rapida-al-aire-libre-jesus-horche",
+    "enlaces": [],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.horche.org/actualidad/agenda/xxxv-certamen-internacional-de-pintura-rapida-al-aire-libre-jesus-horche"
+    ],
+    "anadido": "2026-10-02"
   }
 ]
