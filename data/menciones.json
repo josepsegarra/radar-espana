@@ -339,5 +339,60 @@
       "https://www.horche.org/actualidad/agenda/xxxv-certamen-internacional-de-pintura-rapida-al-aire-libre-jesus-horche"
     ],
     "anadido": "2026-10-02"
+  },
+  {
+    "artista": "Ángel González «Gosan»",
+    "descubierto": true,
+    "inicio": "2026-10-16",
+    "fin": null,
+    "continuo": false,
+    "fecha": "Inauguración el 16 oct 2026",
+    "tipo": "Exposición",
+    "titulo": "Crónicas del natural",
+    "lugar": "Sala Eduardo Chicharro (AEPE) · Madrid",
+    "que": "Exposición individual del pintor Ángel González «Gosan» con paisajes y escenas cotidianas de sabor figurativo.",
+    "detalle": "La AEPE anuncia la inauguración el 16 de octubre de 2026 en su sala Eduardo Chicharro. Las obras unen paisaje y presencia humana, con el agua como hilo conductor (por ejemplo «Bajo las aguas del Ebro» y «Travesía de reflejos»). La fuente no indica la fecha de cierre.",
+    "fuente": "AEPE",
+    "url": "https://apintoresyescultores.es/angel-gonzalez-gosan/",
+    "enlaces": [],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://apintoresyescultores.es/angel-gonzalez-gosan/"
+    ],
+    "anadido": "2026-10-05"
+  },
+  {
+    "artista": "Varios artistas",
+    "descubierto": true,
+    "inicio": "2026-10-14",
+    "fin": "2026-10-18",
+    "continuo": false,
+    "fecha": "14 – 18 oct 2026",
+    "tipo": "Curso",
+    "titulo": "Pintura al aire libre (DeCinti Villalón)",
+    "lugar": "Academia DeCinti Villalón · Mérida, Lerma y Granada",
+    "que": "Cursos intensivos de pintura de paisaje al natural, con técnica «alla prima», impartidos por Oscar Villalón o Alejandro DeCinti.",
+    "detalle": "Según la web de la academia, cada curso tiene 8 sesiones en 5 días, del 14 al 18 de octubre de 2026, con sedes en Mérida, Lerma y Granada. Trabajan los fenómenos de la luz mediante apuntes y estudios rápidos. No se ha podido comprobar el precio ni el cupo.",
+    "fuente": "DeCinti Villalón",
+    "url": "https://www.decintivillalon.com/pintura-al-aire-libre/",
+    "enlaces": [
+      {
+        "texto": "Mérida",
+        "url": "https://www.decintivillalon.com/merida-espana/"
+      },
+      {
+        "texto": "Lerma",
+        "url": "https://www.decintivillalon.com/lerma-espana-2/"
+      }
+    ],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.decintivillalon.com/pintura-al-aire-libre/",
+      "https://www.decintivillalon.com/merida-espana/",
+      "https://www.decintivillalon.com/lerma-espana-2/"
+    ],
+    "anadido": "2026-10-05"
   }
 ]
