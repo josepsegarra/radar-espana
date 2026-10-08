@@ -394,5 +394,33 @@
       "https://www.decintivillalon.com/lerma-espana-2/"
     ],
     "anadido": "2026-10-05"
+  },
+  {
+    "artista": "Girbent",
+    "descubierto": true,
+    "inicio": "2026-10-02",
+    "fin": null,
+    "continuo": false,
+    "fecha": "Desde el 2 oct 2026",
+    "tipo": "Exposición",
+    "titulo": "Girbent. Pintar en el siglo XXI",
+    "lugar": "Fundación Bancaja · Valencia",
+    "que": "Veinte óleos de gran formato del pintor mallorquín Girbent que revisan el género del interior con figura en diálogo con la tradición pictórica occidental.",
+    "detalle": "Comisariada por Arturo Castro, reúne obras recientes creadas para la ocasión, piezas inéditas y cuadros anteriores que el artista ha retocado. Se presenta en la Plaça de Tetuan, 23, junto a la muestra de Andrés García Ibáñez. No se ha podido contrastar la fecha de cierre.",
+    "fuente": "VisitValencia / Valencia News",
+    "url": "https://www.visitvalencia.com/agenda-valencia/exposiciones-de-arte-contemporaneo-en-la-fundacion-bancaja",
+    "enlaces": [
+      {
+        "texto": "Programa de otoño",
+        "url": "https://valencianews.es/cultura/fundacion-bancaja-dedica-su-programacion-de-otono-al-arte-contemporaneo-espanol/"
+      }
+    ],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.visitvalencia.com/agenda-valencia/exposiciones-de-arte-contemporaneo-en-la-fundacion-bancaja",
+      "https://valencianews.es/cultura/fundacion-bancaja-dedica-su-programacion-de-otono-al-arte-contemporaneo-espanol/"
+    ],
+    "anadido": "2026-10-08"
   }
 ]
