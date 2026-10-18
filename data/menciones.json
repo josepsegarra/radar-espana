@@ -422,5 +422,34 @@
       "https://valencianews.es/cultura/fundacion-bancaja-dedica-su-programacion-de-otono-al-arte-contemporaneo-espanol/"
     ],
     "anadido": "2026-10-08"
+  },
+  {
+    "artista": "Carlos Franco",
+    "descubierto": true,
+    "inicio": "2026-12-17",
+    "fin": "2027-05-16",
+    "continuo": false,
+    "fecha": "17 dic 2026 – 16 may 2027",
+    "tipo": "Exposición",
+    "titulo": "Por el lomo de un paisaje con patas",
+    "lugar": "CentroCentro · Madrid",
+    "que": "Muestra de Carlos Franco (Madrid, 1951), figura clave de la figuración madrileña contemporánea, con pintura y obra gráfica de los últimos quince años.",
+    "detalle": "Comisariada por Liliana Ang, reúne una selección de pinturas y obra gráfica realizadas sobre todo en los últimos quince años, con piezas inéditas surgidas de cortar y recomponer lienzos de gran formato. Está en la planta 5 de CentroCentro, de martes a domingo de 10:00 a 20:00, con entrada gratuita a las salas de esa planta. Algunas fuentes dan el 16 de diciembre como apertura; la ficha del propio centro indica el 17.",
+    "fuente": "CentroCentro",
+    "url": "https://www.centrocentro.org/exposicion/carlos-franco",
+    "enlaces": [
+      {
+        "texto": "Nota de prensa del Ayuntamiento de Madrid",
+        "url": "https://diario.madrid.es/blog/notas-de-prensa/siete-exposiciones-una-intervencion-site-specific-musica-y-microescena-protagonizan-la-programacion-de-otono-de-centrocentro/"
+      }
+    ],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.centrocentro.org/exposicion/carlos-franco",
+      "https://diario.madrid.es/blog/notas-de-prensa/siete-exposiciones-una-intervencion-site-specific-musica-y-microescena-protagonizan-la-programacion-de-otono-de-centrocentro/",
+      "https://www.planomato.com/es/madrid/p/por-el-lomo-de-un-paisaje-con-patas"
+    ],
+    "anadido": "2026-10-18"
   }
 ]
