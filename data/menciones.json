@@ -451,5 +451,34 @@
       "https://www.planomato.com/es/madrid/p/por-el-lomo-de-un-paisaje-con-patas"
     ],
     "anadido": "2026-10-18"
+  },
+  {
+    "artista": "Juana González",
+    "descubierto": true,
+    "inicio": "2026-10-22",
+    "fin": "2027-04-18",
+    "continuo": false,
+    "fecha": "22 oct 2026 – 18 abr 2027",
+    "tipo": "Exposición",
+    "titulo": "Indómita pintura",
+    "lugar": "CentroCentro · Madrid",
+    "que": "Primera exposición institucional en Madrid de la pintora Juana González, de lenguaje figurativo y narrativo entre el surrealismo y el expresionismo.",
+    "detalle": "Comisariada por Fernando Castro Flórez, ocupa la planta 3 de CentroCentro (Plaza de Cibeles, 1). Incluye pinturas de gran formato y, por primera vez, piezas escultórico-instalativas. Entrada gratuita; abierta de martes a domingo, de 10 a 20 h. Alguna fuente adelanta la apertura al 21 de octubre.",
+    "fuente": "Turismo Madrid (esmadrid.com)",
+    "url": "https://www.esmadrid.com/agenda/juana-gonzalez-indomita-pintura-centrocentro",
+    "enlaces": [
+      {
+        "texto": "Programación de otoño de CentroCentro",
+        "url": "https://diario.madrid.es/blog/notas-de-prensa/siete-exposiciones-una-intervencion-site-specific-musica-y-microescena-protagonizan-la-programacion-de-otono-de-centrocentro/"
+      }
+    ],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.esmadrid.com/agenda/juana-gonzalez-indomita-pintura-centrocentro",
+      "https://diario.madrid.es/blog/notas-de-prensa/siete-exposiciones-una-intervencion-site-specific-musica-y-microescena-protagonizan-la-programacion-de-otono-de-centrocentro/",
+      "https://www.planomato.com/es/madrid/p/juana-gonzalez-indomita-pintura"
+    ],
+    "anadido": "2026-10-25"
   }
 ]
