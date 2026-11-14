@@ -480,5 +480,33 @@
       "https://www.planomato.com/es/madrid/p/juana-gonzalez-indomita-pintura"
     ],
     "anadido": "2026-10-25"
+  },
+  {
+    "artista": "Gottfried Helnwein",
+    "descubierto": true,
+    "inicio": "2026-11-07",
+    "fin": "2027-02-07",
+    "continuo": false,
+    "fecha": "7 nov 2026 – 7 feb 2027",
+    "tipo": "Exposición",
+    "titulo": "La Guerra Continúa: Helnwein y Goya",
+    "lugar": "MEAM, Palau Gomis · Barcelona",
+    "que": "El MEAM enfrenta por primera vez al pintor hiperrealista Gottfried Helnwein con los Desastres de la Guerra de Goya.",
+    "detalle": "Reúne más de 50 obras de Helnwein, centradas en niños como símbolo de las víctimas inocentes, y 13 estampas de Goya. La inauguración se informa entre el 6 y el 7 de noviembre de 2026; el cierre, el 7 de febrero de 2027. El MEAM abre de martes a domingo.",
+    "fuente": "neo2.com / vienna.at",
+    "url": "https://www.neo2.com/?p=760653",
+    "enlaces": [
+      {
+        "texto": "MEAM – exposiciones",
+        "url": "https://www.meam.es/en/exhibitions"
+      }
+    ],
+    "confirmado": false,
+    "verificacion": "busquedas",
+    "contrastes": [
+      "https://www.neo2.com/?p=760653",
+      "https://www.vienna.at/heute-aktueller-denn-je-helnwein-und-goya-in-barcelona/10663781"
+    ],
+    "anadido": "2026-11-14"
   }
 ]
